@@ -59,11 +59,11 @@ int module_start(SceSize argc, const void *args)
                                  disable_led_other); 
 
 	hook[1] = taiHookFunctionExportForKernel(KERNEL_PID,
-								&hook_set_brightness,
-								"SceAVConfig",
-								TAI_ANY_LIBRARY,
-								0xE0C1B743,
-								dim_screen_other);
+				&hook_set_brightness,
+				"SceAVConfig",
+				TAI_ANY_LIBRARY,
+				0xE0C1B743,
+				dim_screen_other);
 	  
 	return SCE_KERNEL_START_SUCCESS;
 }
