@@ -5,7 +5,7 @@ noled is a simple plugin to turn off the blue home button led of PS Vita. Especi
 vitabright is a plugin to further diminish the screen's minimum brightness - marked as not working, probably since the setting wouldn't be reapplied after resuming from sleep
 
 # GN
-GN is simply the above two plugins' source codes united so that, upon resuming from sleep, noled will reapply vitabright's patch together with its own.
+GN is simply the above two plugins' source codes united so that, upon resuming from sleep, noled will reapply vitabright's patch together with its own. In addition, it also lowers color saturation - although working, it was a shot in the dark and still under test.
 
 v1.3 - added modification of color space, less saturated colors on OLED vita
 
