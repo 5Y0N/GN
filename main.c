@@ -9,6 +9,7 @@ void _start() __attribute__ ((weak, alias ("module_start")));
 static SceUID hook[2];
 
 int ksceDisplaySetBrightness(int display, int brightness);
+int ksceDisplaySetColorSpaceMode(int display, int mode);
 int ksceGpioPortClear(int bus, int port);
 int vbright = 1;
 
@@ -20,6 +21,7 @@ SceUID disable_led_other(int bus, int port)
 		return 0;	
 	}
 	ksceDisplaySetBrightness(0, vbright);
+	ksceDisplaySetColorSpaceMode(0, 1);
 	return TAI_CONTINUE(SceUID, hook_disable_led, bus, port);
 }
 
@@ -45,6 +47,7 @@ static void disable_led()
 	ksceGpioPortClear(0, 7);
 	ksceGpioPortClear(0, 6);
 	ksceDisplaySetBrightness(0, vbright);
+	ksceDisplaySetColorSpaceMode(0, 1);
 }
 
 int module_start(SceSize argc, const void *args)
