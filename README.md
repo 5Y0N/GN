@@ -7,6 +7,8 @@ vitabright is a plugin to further diminish the screen's minimum brightness - mar
 # GN
 GN is simply the above two plugins' source codes united so that, upon resuming from sleep, noled will reapply vitabright's patch together with its own.
 
+v1.3 - added modification of color space, less saturated colors on OLED vita
+
 
 It is a kernel plugin so enable it in kernel section of your config.txt.
 
@@ -19,6 +21,6 @@ ux0:tai/GN.skprx
 
 after that, reboot your vita and restart henkaku.
 
-All credits to xerpi, rereprep, devnoname120 - all i did was combine their two projects to fix vitabright's resume from sleep bug
+All credits to xerpi, rereprep, devnoname120 - all i did was combine their two projects to fix vitabright's resume from sleep bug and add a couple lines of code.
 
 Tested on OLED wifi vita - Just like with NoLed, there seems to be a slight delay after resuming from sleep.
